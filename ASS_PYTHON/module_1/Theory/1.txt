@@ -1,0 +1,16 @@
+1. Introduction to Python and its Features (simple, high-level, interpreted language). 
+    python syntex is clean, simple,& easy language
+    it is high level language
+    python excute code line by line.
+    
+
+2. History and evolution of Python. 
+    python was created by guido van rossum in late of 1980s officially released i 1991
+    it is designed to be simple, readable, and powerful programming language
+    
+
+3. Advantages of using Python over other programming languages. 
+    easy to learn and use
+    high-level and interpriter language
+    extensive laibraries 
+    object orianted and functional programming

@@ -1,0 +1,16 @@
+1. Understanding Python’s PEP 8 guidelines.
+    indentation : 4 space
+
+
+2. Indentation, comments, and naming conventions in Python.
+    indentation : here we have to use 4 space insted of tab
+    comments : comments are define by #
+    naming : in python we can not use keyword name as variable name and variable name can not start with number 
+             we can use numbers and _ in variable name
+
+
+3. Writing readable and maintainable code.
+    code :  a=10
+            b=20
+            sum=a+b
+            print(sum)

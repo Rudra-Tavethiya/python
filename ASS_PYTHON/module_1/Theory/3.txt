@@ -1,0 +1,24 @@
+1. Understanding data types: integers, floats, strings, lists, tuples, dictionaries, sets. 
+
+    numeric type : int, float, complex
+    text type : str
+    sequence type : list, tuple, range
+    mapping type : dict
+    set type : set, frozenset
+    boolen type : boolen
+    none type : none
+
+
+2. Python variables and memory allocation. 
+
+    variables name rules : Variable names can contain letters, digits, and underscores (_).
+    Variable names must not start with a digit.
+    Python is case-sensitive, so a and A would be different variables.
+
+
+3. Python operators: arithmetic, comparison, logical, bitwise.
+
+    arithmetic : +,-,*,/,%,**,//
+    comparison : ==,!=,>,<,>=,<=
+    logical : and,or,not
+    bitwise : &,|,^,~,>>,<<
