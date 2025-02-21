@@ -1,0 +1,11 @@
+append()        add list item
+clear()         removes al values from list
+copy()          make copy of list
+count()         returns the number of elements form list
+extend()        add elements of list to other list at the end 
+index()         returns the index of first elemnt with the specified values
+insert()        add the element at specific position of list
+pop()           remove list item from last
+remove()        remove specific element form list
+reverse()       reverse theorder of list item
+sort()          sorting the list item in ascending order 
