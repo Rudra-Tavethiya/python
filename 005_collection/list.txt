@@ -8,4 +8,4 @@ insert()        add the element at specific position of list
 pop()           remove list item from last
 remove()        remove specific element form list
 reverse()       reverse theorder of list item
-sort()          sorting the list item in ascending order 
+sort()          sorting the list item in ascending order
