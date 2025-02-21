@@ -1,0 +1,11 @@
+1. Understanding how to access and manipulate strings. 
+
+
+
+
+2. Basic operations: concatenation, repetition, string methods (upper(), lower(), etc.). 
+
+
+
+
+3. String slicing. 

@@ -1,0 +1,32 @@
+1. Introduction to conditional statements: if, else, elif. 
+
+    if : if the condition is true then run the code
+        syntex : if(confition):
+                    # block of code
+
+    else : if the condition is false then run the code
+        syntex : if(condition):
+                    # block of code
+                 else:
+                    # vlock of code
+
+    elif : whenever the multiple condition is there then we have to use this conditional statement
+        syntex : if(condition):
+                    # block of code
+                 elif(condition):
+                    # block of code
+                 elif(condition):
+                    # block of code
+                 else :
+                    # block of code
+
+2. Nested if-else conditions. 
+
+    nested if-else : when we have condition in condition situation then we are use the nested if else
+        syntex : if(contion):
+                    if(contion):
+                        # block of code
+                    else :
+                        # block of code
+                 else : 
+                    # block of code

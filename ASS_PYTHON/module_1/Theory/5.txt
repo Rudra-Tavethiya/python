@@ -1,0 +1,24 @@
+1. Introduction to for and while loops. 
+
+    for loop : when we know the how many times we have to run the loop at that time we have to use for loop
+        example : we have to print 1 to 5 numbers
+            code : for i in range(1,6):
+                        print(i)
+
+    while : when we have to run the loop till the condition is not satisfied at that time we have to
+            use while loop
+        example : we have to print 1 to 5 number 
+            code : i=1
+                   while i<=5:
+                    print(i)
+
+
+2. Using loops with collections (lists, tuples, etc.). 
+
+    list=["apple","banana","cherry"]
+    for i in list:
+        print(i)
+
+    tpl=("apple","banana","cherry")
+    for i in tpl:
+        print(i)
