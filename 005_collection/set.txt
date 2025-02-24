@@ -1,0 +1,17 @@
+add()                           add an element in set
+clear()                         remove all element from set
+copy()                          for copy of set
+difference()                    return difference between two set
+difference_update()             save the value in same variable
+discard()                       remove the specific item
+intersection()                  return item that contain in both set
+intersection_update()           save the value in same variable
+isdisjoin()                     two set have intersection or not
+issubset()                      return whether another set containn this set ir not
+issuperset()                    return whether this set contain another set or not
+pop()                           remove last element fromset (ramdome maner)
+remove()                        remove the specific element
+symmentric_difference()         return diffrent item from two set
+symmentric_difference_update()  save the value in same variable
+union()                         return a set containg the union of set
+update()                        update the set with the union of this set and others
