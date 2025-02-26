@@ -1,0 +1,11 @@
+clear()         remove all element from dictionary
+copy()          copy the dictionary
+fromkeys()      return dictionary with specific key and value
+get()           return the value of specific key
+item()          return a list containing a tuple for each key value pair
+keys()          returna list containing the dictionary's keys
+pop()           remove item form dictionary last position
+popitem()       remove specific item from dictionary
+setdefault()    set default value to dictionary item
+update()        upate the dictionary eith the specific key-value pairs
+values()        return the list of all values
