@@ -1,11 +1,14 @@
 1. Understanding how to access and manipulate strings. 
 
-
+    accessing string : we can access by using indexing.
+            ex : text = "hello"
+                 print(text[0])
+                 print(text[-1])
 
 
 2. Basic operations: concatenation, repetition, string methods (upper(), lower(), etc.). 
 
-
+    
 
 
 3. String slicing. 
