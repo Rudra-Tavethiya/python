@@ -8,7 +8,36 @@
 
 2. Basic operations: concatenation, repetition, string methods (upper(), lower(), etc.). 
 
-    
+    concatenation : it meanes joint two string 
+            ex : t1 = "hello"
+                 t2 = "world"
+                 t3 = t1 + t2
+                 print(t3)
+
+    repetition : we can repetition by * symbole
+            ex : text = "hello"
+                 result = text*3
+                 print(result)
+
+    string method : upper() : text = "hello"
+                              print(text.upper())
+
+                    lower() : text = "HELLO"
+                              print(text.lower())
 
 
-3. String slicing. 
+3. String slicing : it is allows to extrct portion
+            ex : text = "Hello, World!"
+                 print(text[0:5])
+
+                 text = "Python Programming"
+                         print(text[:6])
+                         print(text[7:])
+                 text = "Hello, World!"
+                 print(text[-6:]) 
+                 print(text[:-6])
+                 
+
+                 text = "abcdefgh"
+                 print(text[::2])
+                 print(text[::-1])
