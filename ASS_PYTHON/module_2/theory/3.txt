@@ -1,0 +1,29 @@
+1. Iterating over a list using loops. 
+
+    ex : fruits = ["apple", "banana", "cherry"]
+         for fruit in fruits:
+             print(fruit)
+
+
+2. Sorting and reversing a list using sort(), sorted(), and reverse().
+
+    ex : numbers = [4, 1, 7, 3, 9]
+         print(numbers.sort())              # sort in ascending order
+         
+         print(numbers.sort(reverse=true))  # sort in descending order
+
+         print(numbers.reverse())
+
+
+3. Basic list manipulations: addition, deletion, updating, and slicing.
+
+    addition : 
+        ex : fruits = ["apple", "banana"]
+             fruits.append("cherry")        # add the cherry in the list
+             
+             fruits.insert(1, "orange")     # add second position orange in the list
+
+    deletion : 
+        ex : fruits.remove("banana")        # remove banana from list
+             fruits.pop()                   # remove last item from list
+             
