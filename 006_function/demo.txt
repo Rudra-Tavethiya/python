@@ -1,0 +1,34 @@
+types of function
+
+    function witout parameter : 
+        e : def msg():
+                print("hello python")
+
+    function with parameters :
+        e : def sum(a,b):
+                print(a+b)
+
+    functioning a value from a function :
+        e : def squre(a):
+                return a*a
+
+    deafault parameter : 
+        e : def student(a=20,b="abc")
+                print(a,b) 
+
+    arbitary arguments(*args and **kwargs) : 
+        *args : 
+            e : def(*load):
+                    sum = 0
+                    for i in a:
+                        sum+=i
+                    print(sum)
+
+        **kwargs : 
+            e : def student(a=20,b="abc")
+                    print(a,b)
+
+        lambada : 
+            e : k = lambada a,b : a+b
+
+                print(k)
