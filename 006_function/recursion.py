@@ -4,3 +4,13 @@
 
 #           base case : this is the condition where the function stop calling itself
 #           recursive case : this is the condition where the function calling itself
+
+
+
+def call(a):
+    print(a+1)
+    a+=1
+    if a<20:
+        call(a)
+
+call(15)
