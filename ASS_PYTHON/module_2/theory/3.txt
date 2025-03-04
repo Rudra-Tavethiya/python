@@ -26,3 +26,15 @@
     deletion : 
         ex : fruits.remove("banana")        # remove banana from list
              fruits.pop()                   # remove last item from list
+
+    updating : 
+        ex : list = [1,2,3,4,5]
+             list[2] = 20
+
+    slicing : 
+        ex : list = [10,20,30,40,50]
+             print(list[1:])
+             print(list[:5])
+             print(list[2:5])
+             print(list[::2])
+             print(list[::-1])
