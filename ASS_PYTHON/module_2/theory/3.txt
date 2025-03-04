@@ -26,4 +26,3 @@
     deletion : 
         ex : fruits.remove("banana")        # remove banana from list
              fruits.pop()                   # remove last item from list
-             
