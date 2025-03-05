@@ -1,0 +1,25 @@
+1. Introduction to dictionaries: key-value pairs. 
+
+    dictionary : it is the collection of key value pairs
+                 key is associated with specific value 
+
+                for creating dictionary we have to use "{}" breackets
+
+                    ex : student = {
+                                "name" : "rudra",
+                                "age" : 20,
+                                "cource" : "python"
+                                }
+
+
+
+2. Accessing, adding, updating, and deleting dictionary elements. 
+
+    accessing : we can access values in a dictionary using keys
+        ex : print(student["name"])
+            print(student["age"])
+            print(student.get("cource"))
+
+
+
+3. Dictionary methods like keys(), values(), and items(). 
