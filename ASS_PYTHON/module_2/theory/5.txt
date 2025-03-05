@@ -1,0 +1,15 @@
+1. Accessing tuple elements using positive and negative indexing. 
+
+    ex : print(tuple[0])
+         print(tuple[2])
+         print(tuple[-1])
+         print(tuple[-3])
+
+
+2. Slicing a tuple to access ranges of elements. 
+
+    ex : print(tuple[1:4])
+         print(tuple[:3])
+         print(tuple[2:])
+         print(tuple[::2])
+         print(tuple[::-1])
