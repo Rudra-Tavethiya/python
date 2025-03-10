@@ -28,6 +28,16 @@
 # file = open("text.txt",'r')
 # print(file.readlines())
 
-with open("text.txt",'r') as f:
-    p = f.read()
-    print(p)
+# with open("text.txt",'r') as f:
+#     p = f.read()
+#     print(p)
+
+
+# with open("TAX.webp",'rb') as f:
+#     p = f.read()
+#     print(p)
+
+with open("home.txt",'w+') as f:
+    f.write("welcome home")
+    f.seek(0)
+    print(f.read())
