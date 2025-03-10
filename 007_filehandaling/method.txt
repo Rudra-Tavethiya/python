@@ -1,0 +1,5 @@
+read()          to read the file
+write()         to write in file
+readline()      to read file line by line
+readlines()     return the file's lines in list formet
+writelines()    to write more lines in file by list of string formet
