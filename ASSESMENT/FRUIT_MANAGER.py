@@ -1,6 +1,7 @@
 
 
 def manage_options():
+    data = {}
     con='y'
     while con!='n':
 
@@ -16,23 +17,26 @@ def manage_options():
         choice = int(input("Enter Your Choice : "))
     
         if choice==1:
-            data = {}
+            
             print("ADD FRUIT STOCK")
             f_name = input("Enter Fruit Name : ")
             f_qty = int(input("Enter Qty (in KG) : "))
             f_prise = int(input("Enter Prise : "))
 
-            
+            data.update({f_name:{"qty":f_qty,"prise":f_prise}})
 
-            con = input("do you want to perform more operations : press y fro yes and pressn for no : ")
+            con = input("do you want to perform more operations : press y fro yes and press n for no : ")
             if con=='y':
-                print("fruit dara added to stock")
+                print("\nFRUIT DATA ADDED IN STOCK\n")
                 pass
             elif con=='n':
-                print("data added to stock")
+                print("\nDATA ADDED IN STOCK\n")
                 break
             else : 
-                print("enter valid input !!!")
+                print("\nYOU ENTER INVALID INPUT!!!\n")
+                break
 
         elif choice==2:
             print("view fruit stock")
+            print(data)
+            break
