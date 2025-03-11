@@ -20,6 +20,26 @@
             print(student["age"])
             print(student.get("cource"))
 
+    adding : to adding the new key value pair assign the value to dictionary
+        ex : student["cource"]="python"
+
+    updating : we can assigna new value to key by using upadating
+                we can add new dictionary in existing dictionary
+        ex : student.update["age"]=26
+            student.update({"address":{"city":"surat", "state":"gujrat"}})
+
+    deleting : we can delete item from dictionary
+        ex : del student["cource"]
+            student.pop("cource")
+            student.popitem()
+            student.cler()
+            
 
 
 3. Dictionary methods like keys(), values(), and items(). 
+
+    keys() : returna list containing the dictionary's keys
+
+    values() : return the list of all values
+
+    item() : return a list containing a tuple for each key value pair
