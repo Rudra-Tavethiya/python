@@ -18,6 +18,10 @@ if choice==1:
 elif choice==2:
     c.customer_operation()
 elif choice==3:
-    print("YOU ARE EXIT NOW")
+    print("""
+          YOU ARE EXIT NOW
+          """)
 else:
-    print("invalid choice !!!")
+    print("""
+          Invalid Choice !!!
+          """)

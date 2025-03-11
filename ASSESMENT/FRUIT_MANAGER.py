@@ -27,13 +27,19 @@ def manage_options():
 
             con = input("do you want to perform more operations : press y fro yes and press n for no : ")
             if con=='y':
-                print("\nFRUIT DATA ADDED IN STOCK\n")
+                print("""
+                      FRUIT DATA ADDED IN STOCK
+                      """)
                 pass
             elif con=='n':
-                print("\nDATA ADDED IN STOCK\n")
+                print("""
+                      DATA ADDED IN STOCK
+                      """)
                 break
             else : 
-                print("\nYOU ENTER INVALID INPUT!!!\n")
+                print("""
+                      YOU ENTER INVALID INPUT!!!
+                      """)
                 break
 
         elif choice==2:
