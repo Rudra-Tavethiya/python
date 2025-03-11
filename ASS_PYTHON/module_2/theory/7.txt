@@ -1,0 +1,27 @@
+1. Iterating over a dictionary using loops. 
+    for keys :  student={"name":"rudra", "age":"20", "cource":"python"}
+                for i in student:
+                    print(i)
+
+    for values: student={"name":"rudra", "age":"20", "cource":"python"}
+                for i in student.values():
+                    print(i)
+
+    for both : student={"name":"rudra", "age":"20", "cource":"python"}
+                for i in student.items():
+                    print(i)
+
+2. Merging two lists into a dictionary using loops or zip(). 
+
+    keys = ["name", "age", "cource"]
+    values = ["rudra", "20", "python"]
+    student={}
+    for i in range(len(keys)):
+        student[keys[i]]=values[i]
+    print(student)
+
+
+3. Counting occurrences of characters in a string using dictionaries.
+
+    
+

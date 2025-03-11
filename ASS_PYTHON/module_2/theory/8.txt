@@ -1,0 +1,13 @@
+1. Defining functions in Python. 
+
+        
+
+
+
+2. Different types of functions: with/without parameters, with/without return values. 
+
+
+
+
+
+3. Anonymous functions (lambda functions).
