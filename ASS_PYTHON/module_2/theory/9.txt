@@ -1,0 +1,21 @@
+1. Introduction to Python modules and importing modules. 
+
+    python modules : it is the file that contains the python code, function, class
+
+    importing function : by importing the modules we can access the functionand classes of that file in current file
+
+
+
+2. Standard library modules: math, random. 
+
+    math modules : this module provides function for mathemetical operation like squre root, trigonometry,
+                    logarithams , & constants like pi & e
+
+    random : this module provide us random number for games, simulations etc,...
+
+
+3. Creating custom modules.
+
+    Creating custom module : for creating custom module create ".py" file with contain function
+                            and for import file just use comand "import"
+                        ex : import random
