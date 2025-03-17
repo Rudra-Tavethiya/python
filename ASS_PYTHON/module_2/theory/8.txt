@@ -1,13 +1,21 @@
 1. Defining functions in Python. 
 
-        
-
+    function : it is the block of code witch we have to use many time
+    
 
 
 2. Different types of functions: with/without parameters, with/without return values. 
 
+    with parameter function : it is the function with parameter
 
+    without parameter function : it is the function without parameter
 
+    with return value function : it is the function with return value
+
+    without return value function : it is the function without return value
 
 
 3. Anonymous functions (lambda functions).
+
+    lambda function : it is the one time function
+                        we can use this function it only one time
