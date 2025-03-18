@@ -2,3 +2,10 @@
 
 
 
+dict = {"name":"rudra",
+        "age":"20",
+        "cource":"python",
+        "city":"surat",
+        "contect":"9316977670",
+        "email":"r@gmail.com"}
+print(dict)
