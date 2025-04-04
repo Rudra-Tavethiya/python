@@ -88,7 +88,33 @@ select sum(sal) as total_salary from emp;
 select avg(sal) from emp;
 select min(sal) from emp;
 select max(sal) from emp;
+
 select count(distinct(dept)) from emp;
+
+#max salary
+select * from emp where sal=(select max(sal) from emp);
+
+#seconf highest sallary
+select * from emp where sal=(select max(sal) from emp where sal < (select max(sal) from emp));
+
+select * from emp order by sal desc limit 1,1;
+
+select max(sal),dept from emp group by dept;
+
+
+
+
+start transaction;
+delete from emp where id=1;
+savepoint a;
+update emp set age=30 where id=2;
+select * from emp;
+rollback;
+
+
+
+
+
 
 
 
