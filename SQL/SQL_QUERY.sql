@@ -113,19 +113,84 @@ rollback;
 
 
 
+create table author(aid int primary key auto_increment, aname varchar(20));
+
+create table publisher(pid int primary key auto_increment, pname varchar(20));
+
+create table book(id int primary key auto_increment, aid int, pid int, foreign key(aid) references author(aid),
+																		foreign key(pid) references publisher(pid));
+
+
+
+select * from book join author on book.aid=author.aid;
+
+select book.bname,author.aname from book join author on book.aid=author.aid;
+
+select b.bname,a.aname from book b join author a on b.aid=a.aid;
+
+select b.bname,a.aname from book b left join author a on b.aid=a.aid;
+
+select b.bname,a.aname from book b right join author a on b.aid=a.aid;
+
+select b.bname,a.aname from book b right join author a on b.aid=a.aid
+union
+select b.bname,a.aname from book b left join author a on b.aid=a.aid;
 
 
 
 
+create view allbook as select * from book;
 
 
 
+delimiter //
+create procedure allemp()
+begin
+	select * from emp;
+end //
+call allemp();
+
+delimiter //
+create procedure agebyid(in eid int)
+begin
+	select age from emp where id=eid;
+end //
+call agebyid(5);
+
+delimiter //
+create procedure total_sal(out t_sal int)
+begin
+	select sum(sal) into t_sal from emp;
+end //
+call total_sal(@t);
+select @t as total_sallary;
+
+delimiter //
+create procedure total_dept1(out t_dep int)
+begin
+	select count(distinct(dept)) into t_dep from emp;
+end //
+call total_dept1(@t);
+select @t as total_department;
+
+delimiter //
+create procedure agebyid8(inout a int)
+begin
+	select age into a from emp where id=a;
+end //
+set @b = 8;
+call agebyid8(@b);
+select @b;
 
 
+create table emplog(id int primary key auto_increment, eid int, name varchar(20), email varchar(50), sal double); 
 
+delimiter //
+create trigger amplog before delete on emp for each row
+begin
+	insert into emplog (eid, name, email, sal) values (old.id,old.name,old.email,old.sal);
+end;
 
-
-
-
+delete from emp where id = 5;
 
 
