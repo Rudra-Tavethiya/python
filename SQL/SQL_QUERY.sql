@@ -4,7 +4,8 @@ use 1_fab;
 create table student(
 id int primary key auto_increment,
 name varchar(20),
-email varchar(50)
+email varchar(50),
+password varchar(8)
 );
 
 alter table student add column (phone int);
@@ -193,4 +194,4 @@ end;
 
 delete from emp where id = 5;
 
-
+alter table data add column password varchar(8);
