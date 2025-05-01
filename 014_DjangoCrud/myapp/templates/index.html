@@ -11,21 +11,53 @@
     {{msg}}
     <form action="{%url 'register'%}" method="post">
         {%csrf_token%}
+        <input type="hidden" name="id" value="{{stu.id}}">
         <label for="uname">username</label>
-        <input type="text" name="uname" id="uname">
+        <input type="text" name="uname" id="uname" value="{{stu.username}}">
         <br><br>
         <label for="email">email</label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" value="{{stu.email}}">
         <br><br>
         <label for="phone">phone</label>
-        <input type="text" name="phone" id="phone">
+        <input type="text" name="phone" id="phone" value="{{stu.phone}}">
         <br><br>
         <label for="age">age</label>
-        <input type="text" name="age" id="age">
+        <input type="text" name="age" id="age" value="{{stu.age}}">
         <br><br>
         <input type="submit">
         
     </form>
+
+    <br>
+
+    <h1>student details</h1>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <td>Id</td>
+            <td>Username</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Age</td>
+            <td colspan="2">Action</td>
+        </tr>
+
+        {%for student in students%}
+
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.username}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.phone}}</td>
+            <td>{{student.age}}</td>
+            <td><a href="{%url 'update'%}?stid={{student.id}}">update</a></td>
+            <td><a href="{%url 'delete'%}?stid={{student.id}}">delete</a></td>
+        </tr>
+
+        {%endfor%}
+
+    </table>
+
 
 </body>
 </html>
