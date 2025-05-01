@@ -9,7 +9,7 @@
 </head>
 <body>
     {{msg}}
-    <form action="{%url 'register'%}" method="post">
+    <form action="{%url 'register'%}" method="post" enctype="multipart/form-data">
         {%csrf_token%}
         <input type="hidden" name="id" value="{{stu.id}}">
         <label for="uname">username</label>
@@ -23,6 +23,8 @@
         <br><br>
         <label for="age">age</label>
         <input type="text" name="age" id="age" value="{{stu.age}}">
+        <label for="img">Image</label>
+        <input type="file" name="file">
         <br><br>
         <input type="submit">
         
@@ -39,6 +41,7 @@
             <td>Email</td>
             <td>Phone</td>
             <td>Age</td>
+            <td>Image</td>
             <td colspan="2">Action</td>
         </tr>
 
@@ -50,6 +53,7 @@
             <td>{{student.email}}</td>
             <td>{{student.phone}}</td>
             <td>{{student.age}}</td>
+            <td><img src="media/{{student.image}}" alt="{{student.image}}" width="100px" height="100px"></td>
             <td><a href="{%url 'update'%}?stid={{student.id}}">update</a></td>
             <td><a href="{%url 'delete'%}?stid={{student.id}}">delete</a></td>
         </tr>

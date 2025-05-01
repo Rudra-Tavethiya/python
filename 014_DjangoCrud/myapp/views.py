@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from myapp.models import *
+import os
 
 # Create your views here.
 def index(request):
@@ -15,6 +16,7 @@ def register(request):
         email = data.get("email")
         phone = data.get("phone")
         age = data.get("age")
+        image = request.FILES['file']
 
     
         if(id):
@@ -23,12 +25,14 @@ def register(request):
              stu.email = email
              stu.phone = phone
              stu.age = age
+             os.remove(stu.image.path)
+             stu.image = request.FILES['file']
 
              stu.save()
 
              return redirect("index")
         else:
-            st = student.objects.create(username=username,email=email,phone=phone,age=age)
+            st = student.objects.create(username=username,email=email,phone=phone,age=age,image=image)
 
             if(st):
             # return render(request,'index.html',{'msg':"Registration successful"})
@@ -39,6 +43,7 @@ def register(request):
 def delete(request):
     stid = request.GET['stid']
     st = student.objects.get(pk=stid)
+    os.remove(st.image.path)
     st.delete()
     return redirect("index")
 
