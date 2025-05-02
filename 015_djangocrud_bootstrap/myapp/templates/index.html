@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-4 card">
+                <h2>Student Registration</h2>
+                <hr>
+                <form action="{%url 'register'%}" method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    <div>
+                        <input type="hidden" name="id" value="{{edt.id}}">
+                    </div>
+                    <div>
+                        <label for="uname">Username</label>
+                        <input type="text" name="uname" id="uname" value="{{edt.username}}" placeholder="Enter Username">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" value="{{edt.email}}" placeholder="Enter email">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phone" id="phone" value="{{edt.phone}}" placeholder="Enter phone">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="age">Age</label>
+                        <input type="text" name="age" id="age" value="{{edt.age}}" placeholder="Enter age">
+                    </div>
+                    <br>
+                    <div>
+                        {%if edt.image%}
+                        <span>
+                            <img src="media/{{edt.image}}" alt="" width="40px" height="40px">
+                            
+                        </span>
+                        {% endif %}
+                    </div>
+                    <div>
+                        <label for="image">Profile Picture</label>
+                        <input type="file" name="img" id="img">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" class="btn btn-success">
+                    </div>
+                </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-7 card">
+                <h2>Student Details</h2>
+                <hr>
+                <table>
+                    <tr>
+                        <td>ID</td>
+                        <td>Username</td>
+                        <td>Email</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>Image</td>                        
+                    </tr>
+                    {% for std in students %}
+                    <tr>
+                        <td>{{std.id}}</td>
+                        <td>{{std.username}}</td>
+                        <td>{{std.email}}</td>
+                        <td>{{std.phone}}</td>
+                        <td>{{std.age}}</td>
+                        <td><img src="media/{{std.image}}" alt="{{std.image}}" width="50px" height="50px"></td>
+                        <td>
+                            <a href="{% url 'edit'%}?sid={{std.id}}" class="btn btn-primary">Edit</a>
+                            <a href="{% url 'delete'%}?sid={{std.id}}" class="btn btn-success">Delete</a>
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
