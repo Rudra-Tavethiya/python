@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    <script>
+        const search = (data) =>{
+            
+            $.get('search',{data},function(rt){
+                
+                var row="<ul>"
+                rt.data.map(ele=>{
+                    row+="<li>"+ele.name+"</li>"
+                })
+                row+="</ul>"
+            
+                $('#result').html(row)
+            })
+        }
+
+        $(document).ready(function(){
+            getcountry()
+        })
+
+
+        const getcountry = () =>{
+            $.get('countries',{},function(rt){
+
+                var options="<option>---select country---</option>"
+                rt.data.map(ele=>{
+                    options+="<option value="+ele.id+">"+ele.name+"</option>"
+                })
+
+                $('#country').html(options)
+            })
+        }
+
+        const getstate = (cid) =>{
+            $.get('states',{cid},function(rt){
+
+                var options="<option>---select state---</option>"
+                rt.data.map(ele=>{
+                    options+="<option value="+ele.id+">"+ele.name+"</option>"
+                })
+
+                $('#state').html(options)
+            })
+        }
+
+        const getcity = (sid) =>{
+            $.get('cities',{sid},function(rt){
+
+                var options="<option>---select city---</option>"
+                rt.data.map(ele=>{
+                    options+="<option value="+ele.id+">"+ele.name+"</option>"
+                })
+
+                $('#city').html(options)
+            })
+        }
+
+    </script>
+    
+</head>
+<body>
+    <input type="text" onkeyup="search(value)">
+    <div id="result"></div>
+    <hr>
+    
+    <select name="country" id="country" onchange="getstate(value)">
+        <option value="0">---select country---</option>
+    </select>
+    <select name="state" id="state" onchange="getcity(value)">
+        <option value="0">---select state---</option>
+    </select>
+    <select name="city" id="city">
+        <option value="0">---select city---</option>
+    </select>
+
+    <hr>
+
+    <a href="crudapp">crudapp</a>
+</body>
+</html>
