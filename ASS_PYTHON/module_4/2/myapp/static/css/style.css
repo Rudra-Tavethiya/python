@@ -2,7 +2,11 @@
     background-color: aqua;
 }
 
-*{
+span{
+    font-size: 30px;
+}
+
+h1{
     font-size: 80px;
     font-style: oblique;
     text-align: center;
